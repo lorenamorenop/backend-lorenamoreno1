@@ -4,7 +4,6 @@ import { v4 as uuid } from "uuid";
 let carts = [];
 const path = "./src/managers/data/carts.json";
 
-//nos trae todo lo que esta en nuestro archivo json
 const getCars = async () => {
   const cartsJson = await fs.promises.readFile(path, "utf-8");
   carts = JSON.parse(cartsJson) || [];

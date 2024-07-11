@@ -6,7 +6,7 @@ import viewsRoutes from "./routes/views.routes.js";
 import __dirname from "./dirname.js";
 
 const app = express();
-const PORT = 8080;
+const PORT = 3001;
 
 app.use(express.json()); // Este middleware nos permite obtener/leer archivos json
 

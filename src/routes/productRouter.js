@@ -21,7 +21,7 @@ router.get("/", async (req, res) => {
 router.get("/:pid", async (req, res) => {
   const { pid } = req.params;
   try {
-    const product = await productManager.getProductById(Number(pid));
+    const product = await productManager.getProductById(pid);
     if (!product)
       return res
         .status(404)

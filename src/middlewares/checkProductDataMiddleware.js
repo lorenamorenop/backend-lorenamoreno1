@@ -13,7 +13,7 @@ export const checkProductData = async (req = request, res = response, next) => {
     };
 
     const products = await productManager.getProducts();
-    // Validar que no se repita el campo code
+
     const productExists = products.find((p) => p.code === code);
     if (productExists)
       return res.status(400).json({

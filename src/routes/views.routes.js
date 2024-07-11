@@ -31,7 +31,7 @@ router.post("/realtimeproducts", async (req, res) => {
 router.delete("/realtimeproducts", async (req, res) => {
   const { id } = req.body;
   console.log(id);
-  await productManager.deleteProduct(Number(id));
+  await productManager.deleteProduct(id);
   const products = await productManager.getProducts();
   io.emit("products", products);
   res.render("realTimeProducts");

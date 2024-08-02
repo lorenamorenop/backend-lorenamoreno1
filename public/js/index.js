@@ -7,7 +7,7 @@ const price = document.getElementById("price");
 const description = document.getElementById("description");
 const deleteForm = document.getElementById("deleteForm");
 
-// Recibimos los productos
+// Recibir los productos:
 socket.on("products", (data) => {
   console.log(data);
   productsList.innerHTML = "";
@@ -29,8 +29,6 @@ socket.on("products", (data) => {
   });
 });
 
-// Enviamos el producto
-
 addForm.addEventListener("submit", async (event) => {
   event.preventDefault();
 
@@ -46,8 +44,6 @@ addForm.addEventListener("submit", async (event) => {
     }),
   });
 });
-
-// Eliminar el productos
 
 deleteForm.addEventListener("submit", async (event) => {
   event.preventDefault();

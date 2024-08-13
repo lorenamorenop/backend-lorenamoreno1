@@ -15,3 +15,8 @@ app.use("/api", router);
 app.listen(envs.PORT, () => {
   console.log(`Servidor escuchando en el puerto ${envs.PORT}`);
 });
+
+app.get("/", (req, res) => {
+  res.setHeader("Content-Type", "application/json");
+  return res.status(200).json({ payload: "server con expresssss" });
+});
